@@ -7,120 +7,125 @@ import org.junit.Test;
 public class MonthTest {
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testValueFromInteger_0() {
-		Month.valueFromInteger(0);
+	public void testvalueFromObject_0() {
+		Month.valueFromObject(0);
 	}
 
 	@Test
-	public void testValueFromInteger_1() {
-		assertEquals(Month.JANUARY, Month.valueFromInteger(1));
+	public void testvalueFromObject_1() {
+		assertEquals(Month.JANUARY, Month.valueFromObject(1));
 	}
 
 	@Test
-	public void testValueFromInteger_2() {
-		assertEquals(Month.FEBRUARY, Month.valueFromInteger(2));
+	public void testvalueFromObject_2() {
+		assertEquals(Month.FEBRUARY, Month.valueFromObject(2));
 	}
 	
 	@Test
-	public void testValueFromInteger_3() {
-		assertEquals(Month.MARCH, Month.valueFromInteger(3));
+	public void testvalueFromObject_3() {
+		assertEquals(Month.MARCH, Month.valueFromObject(3));
 	}
 	
 	@Test
-	public void testValueFromInteger_4() {
-		assertEquals(Month.APRIL, Month.valueFromInteger(4));
+	public void testvalueFromObject_4() {
+		assertEquals(Month.APRIL, Month.valueFromObject(4));
 	}
 
 	@Test
-	public void testValueFromInteger_5() {
-		assertEquals(Month.MAY, Month.valueFromInteger(5));
+	public void testvalueFromObject_5() {
+		assertEquals(Month.MAY, Month.valueFromObject(5));
 	}
 	
 	@Test
-	public void testValueFromInteger_6() {
-		assertEquals(Month.JUNE, Month.valueFromInteger(6));
+	public void testvalueFromObject_6() {
+		assertEquals(Month.JUNE, Month.valueFromObject(6));
 	}
 
 	@Test
-	public void testValueFromInteger_7() {
-		assertEquals(Month.JULY, Month.valueFromInteger(7));
+	public void testvalueFromObject_7() {
+		assertEquals(Month.JULY, Month.valueFromObject(7));
 	}
 
 	@Test
-	public void testValueFromInteger_8() {
-		assertEquals(Month.AUGUST, Month.valueFromInteger(8));
+	public void testvalueFromObject_8() {
+		assertEquals(Month.AUGUST, Month.valueFromObject(8));
 	}
 	
 	@Test
-	public void testValueFromInteger_9() {
-		assertEquals(Month.SEPTEMBER, Month.valueFromInteger(9));
+	public void testvalueFromObject_9() {
+		assertEquals(Month.SEPTEMBER, Month.valueFromObject(9));
 	}
 	
 	@Test
-	public void testValueFromInteger_10() {
-		assertEquals(Month.OCTOBER, Month.valueFromInteger(10));
+	public void testvalueFromObject_10() {
+		assertEquals(Month.OCTOBER, Month.valueFromObject(10));
 	}
 
 	@Test
-	public void testValueFromInteger_11() {
-		assertEquals(Month.NOVEMBER, Month.valueFromInteger(11));
+	public void testvalueFromObject_11() {
+		assertEquals(Month.NOVEMBER, Month.valueFromObject(11));
 	}
 	
 	@Test
-	public void testValueFromInteger_12() {
-		assertEquals(Month.DECEMBER, Month.valueFromInteger(12));
+	public void testvalueFromObject_12() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject(12));
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testValueFromInteger_13() {
-		Month.valueFromInteger(13);
+	public void testvalueFromObject_13() {
+		Month.valueFromObject(13);
+	}
+	
+	@Test
+	public void testvalueFromObject_String_12() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject("12"));
 	}
 
 	@Test
-	public void testValueFromString_January() {
-		assertEquals(Month.JANUARY, Month.valueFromString("January"));
-	}
-
-
-	@Test
-	public void testValueFromString_janUary() {
-		assertEquals(Month.JANUARY, Month.valueFromString("janUary"));
-	}
-
-	@Test
-	public void testValueFromString_Jan() {
-		assertEquals(Month.JANUARY, Month.valueFromString("Jan"));
-	}
-
-	@Test
-	public void testValueFromString_jan() {
-		assertEquals(Month.JANUARY, Month.valueFromString("jan"));
-	}
-
-	@Test
-	public void testValueFromString_December() {
-		assertEquals(Month.DECEMBER, Month.valueFromString("December"));
+	public void testvalueFromObject_January() {
+		assertEquals(Month.JANUARY, Month.valueFromObject("January"));
 	}
 
 
 	@Test
-	public void testValueFromString_decEmber() {
-		assertEquals(Month.DECEMBER, Month.valueFromString("decEmber"));
+	public void testvalueFromObject_janUary() {
+		assertEquals(Month.JANUARY, Month.valueFromObject("janUary"));
 	}
 
 	@Test
-	public void testValueFromString_Dec() {
-		assertEquals(Month.DECEMBER, Month.valueFromString("Dec"));
+	public void testvalueFromObject_Jan() {
+		assertEquals(Month.JANUARY, Month.valueFromObject("Jan"));
 	}
 
 	@Test
-	public void testValueFromString_dec() {
-		assertEquals(Month.DECEMBER, Month.valueFromString("dec"));
+	public void testvalueFromObject_jan() {
+		assertEquals(Month.JANUARY, Month.valueFromObject("jan"));
+	}
+
+	@Test
+	public void testvalueFromObject_December() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject("December"));
+	}
+
+
+	@Test
+	public void testvalueFromObject_decEmber() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject("decEmber"));
+	}
+
+	@Test
+	public void testvalueFromObject_Dec() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject("Dec"));
+	}
+
+	@Test
+	public void testvalueFromObject_dec() {
+		assertEquals(Month.DECEMBER, Month.valueFromObject("dec"));
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testValueFromString_invalid() {
-		Month.valueFromString("Montag");
+	public void testvalueFromObject_invalid() {
+		Month.valueFromObject("Montag");
 	}
 
 }
